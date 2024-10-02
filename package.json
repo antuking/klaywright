@@ -1,0 +1,19 @@
+{
+  "name": "klaywright",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "pretest": "tsc --incremental -p tsconfig.json"
+  },
+  "author": "kyzu",
+  "license": "ISC",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^22.5.5",
+    "allure-playwright": "^3.0.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

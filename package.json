@@ -8,8 +8,7 @@
   "author": "kyzu",
   "license": "ISC",
   "devDependencies": {
-    "@axe-core/playwright": "^4.10.0",
-    "@playwright/test": "^1.47.2",
+    "@playwright/test": "^1.48.1",
     "@types/node": "^22.5.5",
     "allure-playwright": "^3.0.3"
   },

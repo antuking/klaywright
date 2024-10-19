@@ -1,35 +1,18 @@
 import { test as baseTest, TestInfo } from '@playwright/test';
-import { HomePage } from '../pages/home.page';
-import { LoginPage } from "../pages/login.page";
-import { BasePage } from '../pages/base.page';
-import { BaseScenario } from '../pages/base.scenario';
-
-type Pages = {
-    basePage: BasePage;
-    baseScenario: BaseScenario;
-    loginPage: LoginPage;
-    homePage: HomePage;
-};
+import { RegistrationPage } from '../pages/registration.page';
+import { InquirySubmitSuccess } from '../pages/inquirySubmitSuccess.page';
   
-const test = baseTest.extend<Pages>({
+const test = baseTest.extend<{
+    registrationPage: RegistrationPage;
+    inquirySubmitSuccess: InquirySubmitSuccess;
+}>({
     // Initialize the page objects
-    baseScenario: async ({ page }, use, testInfo) => {
-        await use(new BaseScenario(page, testInfo));
+    registrationPage: async ({ page }, use) => {
+        await use(new RegistrationPage(page));
     },
-    loginPage: async ({ page, baseScenario }, use) => {
-        await use(new LoginPage(page, baseScenario));
+    inquirySubmitSuccess: async ({ page }, use) => {
+        await use(new InquirySubmitSuccess(page));
     },
-    homePage: async ({ page, baseScenario }, use) => {
-        await use(new HomePage(page, baseScenario));
-    },
-});
-  
-test.beforeEach(async ({ browser }) => {
-    // console.log('beforeEach tests');
-});
- 
-test.afterEach(async ({ }) => {
-    // console.log('afterEach tests');
 });
  
 // export default and name export so spec files can use it 

@@ -1,6 +1,4 @@
 export const testData = {
-    baseUrl: `https://opensource-demo.orangehrmlive.com/web/index.php`,
-    username: `Admin`,
-    password: `admin123`,
+    baseUrl: 'https://raksul.github.io/recruit-qa-engineer-work-sample/',
     waitForElement: 120000
 }

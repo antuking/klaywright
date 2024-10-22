@@ -1,14 +1,18 @@
 import { test as baseTest, TestInfo } from '@playwright/test';
-import { HomePage } from '../pages/home.page';
-import { LoginPage } from "../pages/login.page";
+import { DashboardPage } from '../pages/dashboard.page';
 import { BasePage } from '../pages/base.page';
 import { BaseScenario } from '../pages/base.scenario';
+import { LoginPage } from '../pages/login.page';
+import { LeavePage } from '../pages/leave.page';
+import { LeaveForm } from '../pages/leave.form';
 
 type Pages = {
     basePage: BasePage;
     baseScenario: BaseScenario;
     loginPage: LoginPage;
-    homePage: HomePage;
+    dashboardPage: DashboardPage;
+    leavePage: LeavePage;
+    leaveForm: LeaveForm;
 };
   
 const test = baseTest.extend<Pages>({
@@ -19,8 +23,14 @@ const test = baseTest.extend<Pages>({
     loginPage: async ({ page, baseScenario }, use) => {
         await use(new LoginPage(page, baseScenario));
     },
-    homePage: async ({ page, baseScenario }, use) => {
-        await use(new HomePage(page, baseScenario));
+    dashboardPage: async ({ page, baseScenario }, use) => {
+        await use(new DashboardPage(page, baseScenario));
+    },
+    leavePage: async ({ page, baseScenario }, use) => {
+        await use(new LeavePage(page, baseScenario));
+    },
+    leaveForm: async ({ page, baseScenario }, use) => {
+        await use(new LeaveForm(page, baseScenario));
     },
 });
   

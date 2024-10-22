@@ -2,3 +2,6 @@
 playwright-report
 test-result
 package-lock.json
+test-results
+.idea
+.DS_Store

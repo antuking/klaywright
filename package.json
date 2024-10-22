@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "pretest": "tsc --incremental -p tsconfig.json"
+    "run:test": "npx playwright test",
+    "debug:test": "PWDEBUG=1 npx playwright test"
   },
   "author": "kyzu",
   "license": "ISC",
@@ -11,7 +12,8 @@
     "@axe-core/playwright": "^4.10.0",
     "@playwright/test": "^1.47.2",
     "@types/node": "^22.5.5",
-    "allure-playwright": "^3.0.3"
+    "allure-playwright": "^3.0.3",
+    "date-fns": "^4.1.0"
   },
   "dependencies": {
     "lodash": "^4.17.21"

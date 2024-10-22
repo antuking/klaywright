@@ -9,7 +9,7 @@
   dependencies:
     axe-core "~4.10.0"
 
-"@playwright/test@^1.47.2":
+"@playwright/test@^1.47.2", "@playwright/test@>=1.36.0":
   version "1.47.2"
   resolved "https://repo.huaweicloud.com/repository/npm/@playwright/test/-/test-1.47.2.tgz"
   integrity sha512-jTXRsoSPONAs8Za9QEQdyjFn+0ZQFjCiIztAIF6bi1HqhBzG9Ma7g1WotyiGqFSBRZjIEqMdT8RUlbk1QVhzCQ==
@@ -31,7 +31,7 @@ allure-js-commons@3.0.3:
     md5 "^2.3.0"
     properties "^1.2.1"
 
-allure-playwright@^3.0.3:
+allure-playwright@^3.0.3, allure-playwright@3.0.3:
   version "3.0.3"
   resolved "https://repo.huaweicloud.com/repository/npm/allure-playwright/-/allure-playwright-3.0.3.tgz"
   integrity sha512-c9ZDHPLx3P7d6PCQzMihT7DXDD2HcRFRwnH6/mtgP//7CW+caIBfpvyzY0o0lCSHl9qiCbAsAQgYKWlMG2PgTQ==
@@ -52,6 +52,11 @@ crypt@0.0.2:
   version "0.0.2"
   resolved "https://repo.huaweicloud.com/repository/npm/crypt/-/crypt-0.0.2.tgz"
   integrity sha512-mCxBlsHFYh9C+HVpiEacem8FEBnMXgU9gy4zmNC+SXAZNB/1idgp/aulFJ4FgCi7GPEVbfyng092GqL2k2rmow==
+
+date-fns@^4.1.0:
+  version "4.1.0"
+  resolved "https://repo.huaweicloud.com/repository/npm/date-fns/-/date-fns-4.1.0.tgz"
+  integrity sha512-Ukq0owbQXxa/U3EGtsdVBkR1w7KOQ5gIBqdH2hkvknzZPYvBxb/aa6E8L7tmjFtkwZBu3UXBbjIgPo/Ez4xaNg==
 
 fsevents@2.3.2:
   version "2.3.2"
@@ -77,7 +82,7 @@ md5@^2.3.0:
     crypt "0.0.2"
     is-buffer "~1.1.6"
 
-playwright-core@1.47.2:
+"playwright-core@>= 1.0.0", playwright-core@1.47.2:
   version "1.47.2"
   resolved "https://repo.huaweicloud.com/repository/npm/playwright-core/-/playwright-core-1.47.2.tgz"
   integrity sha512-3JvMfF+9LJfe16l7AbSmU555PaTl2tPyQsVInqm3id16pdDfvZ8TTZ/pyzmkbDrZTQefyzU7AIHlZqQnxpqHVQ==
